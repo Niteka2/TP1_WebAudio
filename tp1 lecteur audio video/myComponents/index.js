@@ -11,7 +11,7 @@ const template = document.createElement("template");
 template.innerHTML = `
   <style>
      H1 {
-          color:red;
+          color:black;
     }
     canvas {
       border: 1px solid #079992;
@@ -99,6 +99,7 @@ template.innerHTML = `
   </style>
   
   <div class="myPlayer">
+  <h1> Karilys Music Reader</h1>
   <audio id="myPlayer" crossorigin>
         <source src="https://mainline.i3s.unice.fr/mooc/guitarRiff1.ogg" type="audio/ogg" />
         <source src="https://mainline.i3s.unice.fr/mooc/guitarRiff1.mp3" type="audio/mp3" />
