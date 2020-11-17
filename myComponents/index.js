@@ -216,6 +216,10 @@ class MyAudioPlayer extends HTMLElement {
 
     //Création d'un contexte web audio
     let audioContext = new AudioContext();
+    let mediaElement = this.shadowRoot.getElementById('myPlayer');
+    mediaElement.onplay = (e) => { audioContext.resume(); }
+    mediaElement.addEventListener('play', () => audioContext.resume());
+    
     this.filters = [];
     let playerNode = audioContext.createMediaElementSource(this.player);
     this.pannerNode = audioContext.createStereoPanner();
